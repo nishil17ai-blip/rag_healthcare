@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PolicyCare AI</title>
+  <link rel="stylesheet" href="/static/styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-mark" aria-hidden="true">+</div>
+        <div>
+          <div class="brand-name">PolicyCare AI</div>
+          <div class="brand-subtitle">Health Insurance Assistant</div>
+        </div>
+      </div>
+
+      <div class="status-card">
+        <div class="status-row">
+          <span class="status-dot"></span>
+          <span>Policy knowledge ready</span>
+        </div>
+        <p>Answers are grounded in the policy wording. External questions use an agentic web-search path.</p>
+      </div>
+
+      <div class="sidebar-section">
+        <div class="section-label">Try a question</div>
+        <button class="suggestion" data-question="What is the waiting period for pre-existing diseases?">Pre-existing disease waiting period</button>
+        <button class="suggestion" data-question="Is day care treatment covered under this policy?">Day care treatment coverage</button>
+        <button class="suggestion" data-question="If I am hospitalized and my daily room rent is around ₹15,000, will it be covered?">Room rent around ₹15,000</button>
+        <button class="suggestion" data-question="I purchased the policy 5 months ago. Will my kidney stone surgery be covered?">Kidney stone after 5 months</button>
+      </div>
+
+      <div class="sidebar-footer">
+        <span>RAG</span><span>LangGraph</span><span>Groq</span>
+      </div>
+    </aside>
+
+    <main class="main-panel">
+      <header class="topbar">
+        <div>
+          <h1>Ask about your health insurance policy</h1>
+          <p>Clear answers with policy page, section and clause references.</p>
+        </div>
+        <div class="top-badge">HDFC ERGO Optima Secure</div>
+      </header>
+
+      <section id="chat" class="chat" aria-live="polite">
+        <div class="welcome-card">
+          <div class="welcome-icon">✦</div>
+          <h2>How can I help with the policy?</h2>
+          <p>Ask about coverage, waiting periods, exclusions, claim requirements, limits, or a question that also needs current market information.</p>
+        </div>
+      </section>
+
+      <footer class="composer-wrap">
+        <form id="ask-form" class="composer">
+          <textarea id="question" rows="1" placeholder="Ask a policy question…" maxlength="4000" required></textarea>
+          <button id="send" type="submit" aria-label="Send question">
+            <span>Ask</span>
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12h14M13 6l6 6-6 6"/></svg>
+          </button>
+        </form>
+        <p class="disclaimer">Policy information only. This assistant does not provide medical advice. Verify important decisions against the cited policy wording.</p>
+      </footer>
+    </main>
+  </div>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>

@@ -1,4 +1,4 @@
-# PolicyCare AI — Health Insurance RAG + Agentic RAG
+# PolicyCare AI — HealthCare RAG + Agentic RAG
 
 PolicyCare AI is an end-to-end Health Insurance RAG application built for answering policy-related questions using the **HDFC ERGO Optima Secure Policy Wording** as the primary knowledge source.
 
